@@ -78,8 +78,6 @@ variable "tags" {
 }
 
 variable "lb_name" {}
-variable "resource_group_name" {}
-variable "location" {}
 variable "frontend_ip_configuration_name" {}
 variable "frontend_public_ip_address_id" {}
 variable "lb_backend_pool_name" {}
@@ -103,26 +101,24 @@ variable "lb_probe_path" {
 }
 
 
-variable "resource_group_name" {}
-variable "location" {}
 variable "application_gateway_name" {}
 variable "gateway_ip_name" {}
 variable "gateway_subnet_id" {}
-variable "frontend_port_name" {}
-variable "frontend_port_number" {}
-variable "frontend_ip_configuration" {}
-variable "backend_address_pool_name" {}
-variable "backend_ip_addresses" {
+variable "gateway_frontend_port_name" {}
+variable "gateway_frontend_port_number" {}
+variable "gateway_frontend_ip_configuration" {}
+variable "gateway_backend_address_pool_name" {}
+variable "gateway_backend_ip_addresses" {
     default = []
 }
-variable "backend_http_settings_name" {}
-variable "appgtw_protocol" {
+variable "gateway_backend_http_settings_name" {}
+variable "gateway_protocol" {
     type    = string
   default = "Http"
 }
-variable "probe_name" {}
-variable "http_listener_name" {}
-variable "routing_rule_name" {}
-variable "probe_host" {}
-variable "probe_path" {}
+variable "gateway_probe_name" {}
+variable "gateway_http_listener_name" {}
+variable "gateway_routing_rule_name" {}
+variable "gateway_probe_host" {}
+variable "gateway_probe_path" {}
 variable "appgw_public_ip_id" {}
