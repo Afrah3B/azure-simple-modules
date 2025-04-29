@@ -5,12 +5,12 @@ output "vnet_id" {
 
 output "subnet_ids" {
   description = "The IDs of the created subnets"
-  value       = azurerm_subnet.subnet[*].id
+  value       = [for subnet in azurerm_subnet.subnet : subnet.id]
 }
 
 output "network_interface_ids" {
   description = "The IDs of the created Network Interfaces"
-  value       = azurerm_network_interface.network_interface_card[*].id
+  value       = [for network_interface_card in azurerm_network_interface.network_interface_card : network_interface_card.id]
 }
 
 output "network_security_group_id" {
