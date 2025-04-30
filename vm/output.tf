@@ -22,3 +22,8 @@ output "nic_private_ips" {
   description = "The private IPs of the network interfaces"
   value = [for nic in azurerm_network_interface.nic : nic.private_ip_address]
 }
+
+output "tls_private_key" {
+  value     = tls_private_key.ssh_key.private_key_pem
+  sensitive = true
+}

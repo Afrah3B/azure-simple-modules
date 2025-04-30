@@ -50,7 +50,7 @@ resource "azurerm_lb_probe" "health_probe" {
   name                              = "health-probe"
   loadbalancer_id                   = azurerm_lb.loadbalancer.id
   port                              = var.backend_port
-  protocol                          = var.protocol
+  protocol                          = "Http"
   request_path                      = var.lb_probe_path
   interval_in_seconds               = 15
   number_of_probes                  = 3

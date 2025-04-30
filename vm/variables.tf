@@ -15,11 +15,6 @@ variable "resource_group_name" {
   type = string
 }
 
-variable "network_interface_ids" {
-  type        = list(string)
-  description = "List of NIC IDs to attach to VMs"
-}
-
 variable "vm_size" {
   type = string
   default = "Standard_DS2_v3"
