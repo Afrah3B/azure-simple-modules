@@ -63,4 +63,5 @@ resource "azurerm_application_gateway" "appgtw" {
     timeout             = 20
     unhealthy_threshold = 3
   }
+  tags = var.tags
 }

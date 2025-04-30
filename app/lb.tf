@@ -8,6 +8,7 @@ resource "azurerm_lb" "loadbalancer" {
     name                 = var.frontend_ip_configuration_name
     public_ip_address_id = var.frontend_public_ip_address_id
   }
+  tags = var.tags
 }
 
 resource "azurerm_lb_backend_address_pool" "backend_pool" {

@@ -1,18 +1,3 @@
-output "vm_ids" {
-  description = "IDs of the virtual machines"
-  value       = [for vm in azurerm_linux_virtual_machine.vm : vm.id]
-}
-
-output "vm_private_ips" {
-  description = "Private IP addresses of the virtual machines"
-  value       = [for vm in azurerm_linux_virtual_machine.vm : vm.private_ip_address]
-}
-
-output "vm_public_ips" {
-  description = "Public IP addresses of the virtual machines"
-  value       = [for vm in azurerm_linux_virtual_machine.vm : vm.public_ip_address]
-}
-
 output "load_balancer_id" {
   description = "ID of the Azure Load Balancer"
   value       = azurerm_lb.loadbalancer.id

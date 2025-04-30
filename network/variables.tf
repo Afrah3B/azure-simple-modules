@@ -67,18 +67,3 @@ variable "ip_allocation_method" {
   default = "Static"
 
 }
-
-variable "nic_name" {
-  type = string
-}
-
-variable "ip_configuration_name" {
-  description = "The name of the NIC IP configuration"
-  type        = string
-}
-
-variable "private_ip_address_allocation" {
-  description = "The private IP allocation method for NIC"
-  type        = string
-  default     = "Dynamic"
-}
